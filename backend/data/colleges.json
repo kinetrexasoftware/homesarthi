@@ -1,0 +1,992 @@
+[
+  {
+    "id": "iet-lucknow",
+    "name": "Institute of Engineering & Technology, Lucknow",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9147,
+      "longitude": 80.9483
+    }
+  },
+  {
+    "id": "aktu-faculty-of-engineering",
+    "name": "Dr. A.P.J. Abdul Kalam Technical University – Faculty of Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8759,
+      "longitude": 80.9896
+    }
+  },
+  {
+    "id": "bbd-itm",
+    "name": "Babu Banarasi Das Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8017,
+      "longitude": 81.0337
+    }
+  },
+  {
+    "id": "bbd-niiit",
+    "name": "Babu Banarasi Das Northern India Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8034,
+      "longitude": 81.0351
+    }
+  },
+  {
+    "id": "azad-institute-engineering",
+    "name": "Azad Institute of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8815,
+      "longitude": 81.0613
+    }
+  },
+  {
+    "id": "goel-institute-technology-management",
+    "name": "Goel Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9141,
+      "longitude": 81.0339
+    }
+  },
+  {
+    "id": "integral-university-engineering",
+    "name": "Integral University – Faculty of Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9166,
+      "longitude": 80.9992
+    }
+  },
+  {
+    "id": "amity-university-lucknow-engineering",
+    "name": "Amity University Lucknow Campus – Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8456,
+      "longitude": 81.0193
+    }
+  },
+  {
+    "id": "himalayan-institute-technology-management",
+    "name": "Himalayan Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9411,
+      "longitude": 80.9899
+    }
+  },
+  {
+    "id": "lucknow-institute-technology",
+    "name": "Lucknow Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9024,
+      "longitude": 81.0451
+    }
+  },
+  {
+    "id": "lucknow-model-institute-technology-management",
+    "name": "Lucknow Model Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9009,
+      "longitude": 81.0206
+    }
+  },
+  {
+    "id": "rameshwaram-institute-technology-management",
+    "name": "Rameshwaram Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9426174,
+      "longitude": 80.9293038
+    }
+  },
+  {
+    "id": "sherwood-college-engineering-research-technology",
+    "name": "Sherwood College of Engineering Research and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8527,
+      "longitude": 81.0243
+    }
+  },
+  {
+    "id": "bncet-lucknow",
+    "name": "BN College of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9112,
+      "longitude": 80.9857
+    }
+  },
+  {
+    "id": "ambalika-institute-management-technology",
+    "name": "Ambalika Institute of Management and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9382,
+      "longitude": 80.9984
+    }
+  },
+  {
+    "id": "gcrg-memorial-trust-engineering",
+    "name": "GCRG Memorial Trust – Faculty of Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9601,
+      "longitude": 80.9958
+    }
+  },
+  {
+    "id": "mgiimt-lucknow",
+    "name": "MG Institute of Management and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8729,
+      "longitude": 81.0541
+    }
+  },
+  {
+    "id": "jan-kalyan-institute-technical-excellence",
+    "name": "Jan Kalyan Institute of Technical Excellence",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9335,
+      "longitude": 80.9839
+    }
+  },
+  {
+    "id": "maharana-institute-technology-science",
+    "name": "Maharana Institute of Technology and Science",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8908,
+      "longitude": 81.0475
+    }
+  },
+  {
+    "id": "babu-sunder-singh-institute-technology-management",
+    "name": "Babu Sunder Singh Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9446,
+      "longitude": 81.0048
+    }
+  },
+  {
+    "id": "bansal-institute-engineering-technology",
+    "name": "Bansal Institute of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9423507,
+      "longitude":80.9242051
+    }
+  },
+  {
+    "id": "dr-mc-saxena-college-engineering-technology",
+    "name": "Dr. M.C. Saxena College of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8765,
+      "longitude": 81.0043
+    }
+  },
+  {
+    "id": "goel-institute-engineering-technology",
+    "name": "Goel Institute of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9153,
+      "longitude": 81.0317
+    }
+  },
+  {
+    "id": "rr-group-institutions",
+    "name": "R R Group of Institutions",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8578,
+      "longitude": 81.0139
+    }
+  },
+  {
+    "id": "sri-ramswaroop-memorial-college-engineering",
+    "name": "Sri Ramswaroop Memorial College of Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8427,
+      "longitude": 81.0631
+    }
+  },
+  {
+    "id": "sms-institute-technology",
+    "name": "SMS Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9234,
+      "longitude": 80.9796
+    }
+  },
+  {
+    "id": "vision-institute-technology",
+    "name": "Vision Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9028,
+      "longitude": 81.0419
+    }
+  },
+  {
+    "id": "rameshwaram-institute-engineering-technology",
+    "name": "Rameshwaram Institute of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8719,
+      "longitude": 80.9916
+    }
+  },
+  {
+    "id": "bbd-college-engineering",
+    "name": "BBD College of Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8049,
+      "longitude": 81.0378
+    }
+  },
+  {
+    "id": "central-institute-plastic-engineering-technology",
+    "name": "Central Institute of Plastic Engineering and Technology, Lucknow",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9552,
+      "longitude": 80.9627
+    }
+  },
+  {
+    "id": "gaya-prasad-institute-human-excellence",
+    "name": "Gaya Prasad Institute of Human Excellence",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9418,
+      "longitude": 80.9794
+    }
+  },
+  {
+    "id": "city-college-management-technology",
+    "name": "City College of Management and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9021,
+      "longitude": 81.0187
+    }
+  },
+  {
+    "id": "aryakul-college-management",
+    "name": "Aryakul College of Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8714,
+      "longitude": 80.9738
+    }
+  },
+  {
+    "id": "mg-institute-management-technology",
+    "name": "M G Institute of Management and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8796,
+      "longitude": 81.0503
+    }
+  },
+  {
+    "id": "jan-kalyan-institute-technical-excellence-2",
+    "name": "Jan Kalyan Institute of Technical Excellence",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9335,
+      "longitude": 80.9839
+    }
+  },
+  {
+    "id": "ansal-institute-technology",
+    "name": "Ansal Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8519,
+      "longitude": 81.0608
+    }
+  },
+  {
+    "id": "gcrg-institute-engineering-technology",
+    "name": "GCRG Institute of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9582,
+      "longitude": 80.9946
+    }
+  },
+  {
+    "id": "integral-institute-technology",
+    "name": "Integral Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9166,
+      "longitude": 80.9992
+    }
+  },
+  {
+    "id": "bbdu-school-engineering",
+    "name": "BBD University – School of Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8019,
+      "longitude": 81.0342
+    }
+  },
+  {
+    "id": "goel-group-faculty-engineering",
+    "name": "Goel Group – Faculty of Engineering",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9149,
+      "longitude": 81.0314
+    }
+  },
+  {
+    "id": "lucknow-engineering-college",
+    "name": "Lucknow Engineering College",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8886,
+      "longitude": 81.0579
+    }
+  },
+  {
+    "id": "hindustan-institute-technology-lucknow",
+    "name": "Hindustan Institute of Technology, Lucknow",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9047,
+      "longitude": 81.0325
+    }
+  },
+  {
+    "id": "techno-institute-engineering-lucknow",
+    "name": "Techno Institute of Engineering, Lucknow",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9218,
+      "longitude": 81.0156
+    }
+  },
+  {
+    "id": "rameshwaram-group-technical-institutions",
+    "name": "Rameshwaram Group of Technical Institutions",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8734,
+      "longitude": 80.9862
+    }
+  },
+  {
+    "id": "rr-institute-technology",
+    "name": "R R Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8594,
+      "longitude": 81.0182
+    }
+  },
+  {
+    "id": "goel-institute-advanced-technology",
+    "name": "Goel Institute of Advanced Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9138,
+      "longitude": 81.0289
+    }
+  },
+  {
+    "id": "sr-group-technical-campus",
+    "name": "S.R. Group of Technical Campus",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8409,
+      "longitude": 81.0668
+    }
+  },
+  {
+    "id": "global-institute-technology-management",
+    "name": "Global Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9273,
+      "longitude": 81.0042
+    }
+  },
+  {
+    "id": "future-institute-engineering-technology",
+    "name": "Future Institute of Engineering and Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8952,
+      "longitude": 81.0447
+    }
+  },
+  {
+    "id": "national-institute-engineering-management",
+    "name": "National Institute of Engineering and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9106,
+      "longitude": 81.0129
+    }
+  },
+  {
+    "id": "atal-bihari-vajpayee-medical-university",
+    "name": "Atal Bihari Vajpayee Medical University",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8467,
+      "longitude": 80.9996
+    }
+  },
+  {
+    "id": "career-institute-medical-sciences",
+    "name": "Career Institute of Medical Sciences and Hospital",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8614,
+      "longitude": 81.0212
+    }
+  },
+  {
+    "id": "era-medical-college",
+    "name": "Era’s Lucknow Medical College & Hospital",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.9129,
+      "longitude": 80.9994
+    }
+  },
+  {
+    "id": "dr-ram-manohar-lohia-medical",
+    "name": "Dr. Ram Manohar Lohia Institute of Medical Sciences",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8467,
+      "longitude": 80.9996
+    }
+  },
+  {
+    "id": "integral-medical-sciences",
+    "name": "Integral Institute of Medical Sciences",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.9181,
+      "longitude": 81.0022
+    }
+  },
+  {
+    "id": "fatima-college-nursing",
+    "name": "Fatima College of Nursing",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8739,
+      "longitude": 80.9178
+    }
+  },
+  {
+    "id": "gcrg-college-nursing",
+    "name": "GCRG College of Nursing",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.9584,
+      "longitude": 80.9945
+    }
+  },
+  {
+    "id": "maa-bhagwati-college-nursing",
+    "name": "Maa Bhagwati College of Nursing",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.9348,
+      "longitude": 80.9832
+    }
+  },
+  {
+    "id": "babu-yugraj-singh-medical",
+    "name": "Babu Yugraj Singh College of Medical Sciences",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8562,
+      "longitude": 81.0408
+    }
+  },
+  {
+    "id": "rajendra-college-nursing",
+    "name": "Rajendra College of Nursing",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.9124,
+      "longitude": 81.0087
+    }
+  },
+  {
+    "id": "faculty-architecture-aktu",
+    "name": "AKTU Faculty of Architecture",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8759,
+      "longitude": 80.9896
+    }
+  },
+  {
+    "id": "cipet-lucknow",
+    "name": "Central Institute of Plastic Engineering & Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9552,
+      "longitude": 80.9627
+    }
+  },
+  {
+    "id": "iet-architecture",
+    "name": "IET – Department of Architecture",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9147,
+      "longitude": 80.9483
+    }
+  },
+  {
+    "id": "jan-kalyan-polytechnic",
+    "name": "Jan Kalyan Polytechnic",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9331,
+      "longitude": 80.9828
+    }
+  },
+  {
+    "id": "government-polytechnic-lucknow",
+    "name": "Government Polytechnic, Lucknow",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8801,
+      "longitude": 80.9324
+    }
+  },
+  {
+    "id": "city-montessori-school-gomti",
+    "name": "City Montessori School, Gomti Nagar",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8567,
+      "longitude": 81.0106
+    }
+  },
+  {
+    "id": "city-montessori-school-alambagh",
+    "name": "City Montessori School, Alambagh",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8341,
+      "longitude": 80.9184
+    }
+  },
+  {
+    "id": "la-martiniere-college",
+    "name": "La Martiniere College",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8472,
+      "longitude": 80.9396
+    }
+  },
+  {
+    "id": "st-francis-college",
+    "name": "St. Francis’ College",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8611,
+      "longitude": 80.9374
+    }
+  },
+  {
+    "id": "loreto-convent",
+    "name": "Loreto Convent Intermediate College",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8543,
+      "longitude": 80.9349
+    }
+  },
+  {
+    "id": "st-joseph-hospital-nursing",
+    "name": "St. Joseph College of Nursing",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8732,
+      "longitude": 80.9186
+    }
+  },
+  {
+    "id": "sahara-college-nursing",
+    "name": "Sahara College of Nursing",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8369,
+      "longitude": 80.9798
+    }
+  },
+  {
+    "id": "vivekanand-college-pharmacy",
+    "name": "Vivekanand College of Pharmacy",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8994,
+      "longitude": 81.0481
+    }
+  },
+  {
+    "id": "seiko-college-pharmacy",
+    "name": "Seiko College of Pharmacy",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.9146,
+      "longitude": 81.0619
+    }
+  },
+  {
+    "id": "career-convent-college-pharmacy",
+    "name": "Career Convent College of Pharmacy",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "medical",
+    "coordinates": {
+      "latitude": 26.8687,
+      "longitude": 81.0396
+    }
+  },
+  {
+    "id": "government-girls-polytechnic",
+    "name": "Government Girls Polytechnic, Lucknow",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8812,
+      "longitude": 80.9347
+    }
+  },
+  {
+    "id": "itrc-lucknow",
+    "name": "Institute of Technology and Research Centre",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9245,
+      "longitude": 81.0062
+    }
+  },
+  {
+    "id": "naraina-institute-technology",
+    "name": "Naraina Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9057,
+      "longitude": 81.0573
+    }
+  },
+  {
+    "id": "samarpan-institute-technology",
+    "name": "Samarpan Institute of Technology and Management",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.9426,
+      "longitude": 80.9871
+    }
+  },
+  {
+    "id": "lords-institute-technology",
+    "name": "Lords Institute of Technology",
+    "city": "Lucknow",
+    "type": "college",
+    "category": "engineering",
+    "coordinates": {
+      "latitude": 26.8917,
+      "longitude": 81.0338
+    }
+  },
+  {
+    "id": "st-pauls-college",
+    "name": "St. Paul’s College",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8588,
+      "longitude": 80.9319
+    }
+  },
+  {
+    "id": "st-marys-convent",
+    "name": "St. Mary’s Convent School",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8524,
+      "longitude": 80.9278
+    }
+  },
+  {
+    "id": "spring-dale-college",
+    "name": "Spring Dale College",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.9003,
+      "longitude": 81.0081
+    }
+  },
+  {
+    "id": "gd-goenka-public-school",
+    "name": "G.D. Goenka Public School, Lucknow",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8449,
+      "longitude": 81.0146
+    }
+  },
+  {
+    "id": "delhi-public-school-gomti",
+    "name": "Delhi Public School, Gomti Nagar",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8516,
+      "longitude": 81.0098
+    }
+  },
+  {
+    "id": "delhi-public-school-alambagh",
+    "name": "Delhi Public School, Alambagh",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8309,
+      "longitude": 80.9187
+    }
+  },
+  {
+    "id": "mount-carmel-college",
+    "name": "Mount Carmel College",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8619,
+      "longitude": 80.9341
+    }
+  },
+  {
+    "id": "cathedral-school",
+    "name": "Cathedral School",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8468,
+      "longitude": 80.9424
+    }
+  },
+  {
+    "id": "modern-academy",
+    "name": "Modern Academy",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8756,
+      "longitude": 80.9641
+    }
+  },
+  {
+    "id": "bal-vidya-mandir",
+    "name": "Bal Vidya Mandir Senior Secondary School",
+    "city": "Lucknow",
+    "type": "school",
+    "category": "school",
+    "coordinates": {
+      "latitude": 26.8837,
+      "longitude": 80.9526
+    }
+  }
+]
