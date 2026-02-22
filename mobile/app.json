@@ -1,0 +1,74 @@
+{
+  "expo": {
+    "name": "HomeSarthi",
+    "slug": "homesarthi",
+    "owner": "hridesh2005",
+    "scheme": "homesarthi-mobile",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#F5F5F5"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.homesarthi.mobile",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "HomeSarthi uses your location to show nearby rooms and improve search results.",
+        "NSPhotoLibraryUsageDescription": "HomeSarthi needs photo access to upload room and profile images."
+      }
+    },
+    "android": {
+      "package": "com.homesarthi.mobile",
+      "versionCode": 3,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F5F5F5"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBcPcf5PbBd0X-Kkx8KPMrKODaxU5RwdxI"
+        }
+      },
+      "useNextNotificationsApi": true,
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "@react-native-community/datetimepicker",
+      "expo-web-browser",
+      "expo-notifications",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow HomeSarthi to use your location.",
+          "locationWhenInUsePermission": "HomeSarthi uses your location to show nearby rooms."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "HomeSarthi needs photo access to upload room and profile images."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "6b5185b2-2350-47bf-bd3c-ead96cc039aa"
+      }
+    }
+  }
+}

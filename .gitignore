@@ -1,0 +1,20 @@
+node_modules/
+.expo/
+dist/
+npm-debug.*
+yarn-error.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Web
+public/
+build/
+out/
+.next/
