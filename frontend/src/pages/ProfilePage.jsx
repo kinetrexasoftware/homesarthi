@@ -150,18 +150,8 @@ const ProfilePage = () => {
     }
   };
 
-  const handleDeleteAccount = async () => {
-    setLoading(true);
-    try {
-      await api.delete('/users/delete-account');
-      toast.success('Account deleted permanently');
-      logout();
-      navigate('/');
-    } catch (error) {
-      toast.error('Failed to delete account');
-    } finally {
-      setLoading(false);
-    }
+  const goToDeletePage = () => {
+    navigate('/delete-account');
   };
 
   return (
@@ -555,7 +545,7 @@ const ProfilePage = () => {
                         <p className="text-xs font-bold text-red-700">Delete Account</p>
                         <p className="text-[10px] text-red-500">Permanent action</p>
                       </div>
-                      <button onClick={() => setShowDeleteModal(true)} className="p-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all shadow-lg shadow-red-600/20">
+                      <button onClick={goToDeletePage} className="p-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all shadow-lg shadow-red-600/20">
                         <Trash2 size={18} />
                       </button>
                     </div>
