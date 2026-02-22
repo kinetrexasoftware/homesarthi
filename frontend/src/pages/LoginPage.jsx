@@ -106,7 +106,7 @@ const LoginPage = () => {
               <h1 className="text-5xl font-extrabold leading-tight tracking-tight mb-6">
                 Find your perfect <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                   Home!
+                  Home!
                 </span>
               </h1>
               <p className="text-lg text-slate-400 max-w-md leading-relaxed">
@@ -223,7 +223,7 @@ const LoginPage = () => {
                 {!loading && <ArrowRight size={18} />}
               </button>
 
-              <div className="relative flex items-center justify-center py-2">
+              {/* <div className="relative flex items-center justify-center py-2">
                 <div className="flex-grow border-t border-gray-200"></div>
                 <span className="flex-shrink mx-4 text-gray-400 text-xs uppercase tracking-wider">Or continue with</span>
                 <div className="flex-grow border-t border-gray-200"></div>
@@ -239,7 +239,7 @@ const LoginPage = () => {
                   width="100%"
                   text="signin_with"
                 />
-              </div>
+              </div> */}
             </div>
           </form>
 

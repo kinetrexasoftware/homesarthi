@@ -410,7 +410,7 @@ const RegisterScreen = ({ navigation }) => {
                         </LinearGradient>
                     </TouchableOpacity>
 
-                    <View style={styles.dividerContainer}>
+                    {/* <View style={styles.dividerContainer}>
                         <View style={styles.dividerLine} />
                         <Text style={styles.dividerText}>OR CONTINUE WITH</Text>
                         <View style={styles.dividerLine} />
@@ -429,7 +429,7 @@ const RegisterScreen = ({ navigation }) => {
                                 <Text style={styles.googleButtonText}>Continue with Google</Text>
                             </View>
                         )}
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
 
                 <View style={styles.footer}>

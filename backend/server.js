@@ -60,7 +60,7 @@ const FRONTEND_URL = (process.env.FRONTEND_URL || "http://localhost:5173")
    ========================= */
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.NODE_ENV === "development" ? "*" : FRONTEND_URL,
+    origin: "*",
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -81,7 +81,7 @@ app.use(compression());
 
 app.use(
   cors({
-    origin: process.env.NODE_ENV === "development" ? "*" : FRONTEND_URL,
+    origin: "*", // Fully open for production mobile connectivity
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],

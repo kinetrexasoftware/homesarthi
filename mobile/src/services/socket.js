@@ -1,12 +1,11 @@
 import { io } from 'socket.io-client';
 import * as SecureStore from 'expo-secure-store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { API_URL } from '../constants/config';
+import { API_URL, SERVER_URL } from '../constants/config';
 
 let socket = null;
 
-// Get the base URL (e.g. http://10.127.245.46:5000) from API_URL (http://10.127.245.46:5000/api)
-const SOCKET_URL = API_URL.replace('/api', '');
+
 
 export const initSocket = async (userId) => {
     if (socket?.connected) {
@@ -19,12 +18,19 @@ export const initSocket = async (userId) => {
         return null;
     }
 
-    socket = io(SOCKET_URL, {
-        transports: ['websocket'],
+    // Determine Socket URL safely
+    const finalSocketUrl = SERVER_URL || API_URL.replace('/api', '');
+    console.log(`[Socket] Initializing connection to: ${finalSocketUrl}`);
+
+    socket = io(finalSocketUrl, {
+        transports: ['polling', 'websocket'], // Try polling first for better compatibility with VPS proxies
         auth: { token },
         reconnection: true,
-        reconnectionDelay: 1000,
-        reconnectionAttempts: 10
+        reconnectionDelay: 5000, // Wait 5s between retries to reduce UI clutter
+        reconnectionAttempts: 10,
+        secure: true,
+        timeout: 20000,
+        path: '/socket.io/'
     });
 
     socket.on('connect', () => {

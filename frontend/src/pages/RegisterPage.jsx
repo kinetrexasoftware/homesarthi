@@ -299,7 +299,7 @@ const RegisterPage = () => {
                 {!loading && <ArrowRight size={18} />}
               </button>
 
-              <div className="relative flex items-center justify-center py-2">
+              {/* <div className="relative flex items-center justify-center py-2">
                 <div className="flex-grow border-t border-gray-200"></div>
                 <span className="flex-shrink mx-4 text-gray-400 text-xs uppercase tracking-wider">Or continue with</span>
                 <div className="flex-grow border-t border-gray-200"></div>
@@ -315,7 +315,7 @@ const RegisterPage = () => {
                   width="100%"
                   text="signup_with"
                 />
-              </div>
+              </div> */}
             </div>
           </form>
 

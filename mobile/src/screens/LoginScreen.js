@@ -193,7 +193,7 @@ const LoginScreen = ({ navigation }) => {
                         </LinearGradient>
                     </TouchableOpacity>
 
-                    <View style={styles.dividerContainer}>
+                    {/* <View style={styles.dividerContainer}>
                         <View style={styles.dividerLine} />
                         <Text style={styles.dividerText}>OR CONTINUE WITH</Text>
                         <View style={styles.dividerLine} />
@@ -212,7 +212,7 @@ const LoginScreen = ({ navigation }) => {
                                 <Text style={styles.googleButtonText}>Sign in with Google</Text>
                             </View>
                         )}
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
 
                 <View style={styles.footer}>

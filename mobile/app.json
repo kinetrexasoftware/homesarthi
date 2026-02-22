@@ -41,7 +41,6 @@
           "apiKey": "AIzaSyBcPcf5PbBd0X-Kkx8KPMrKODaxU5RwdxI"
         }
       },
-      "useNextNotificationsApi": true,
       "edgeToEdgeEnabled": true
     },
     "web": {
