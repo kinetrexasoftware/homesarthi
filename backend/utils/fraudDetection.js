@@ -5,7 +5,7 @@ import Report from '../models/Report.js';
 import Analytics from '../models/Analytics.js';
 
 /**
- * Fraud Detection Engine for StayHome Platform
+ * Fraud Detection Engine for HomeSarthi Platform
  * Detects suspicious activities, fake listings, spam, and fraudulent behavior
  */
 export class FraudDetectionEngine {

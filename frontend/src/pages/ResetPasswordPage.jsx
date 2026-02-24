@@ -4,6 +4,7 @@ import { Lock, Eye, EyeOff, ArrowRight, ArrowLeft, ShieldCheck } from 'lucide-re
 import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import api from '../utils/api';
+import authBg from '../assets/auth-bg.png';
 
 const ResetPasswordPage = () => {
     const navigate = useNavigate();
@@ -72,7 +73,7 @@ const ResetPasswordPage = () => {
             >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-purple-600/90 z-10" />
                 <img
-                    src="/auth-bg.png"
+                    src={authBg}
                     alt="Student Housing"
                     className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
                 />
@@ -82,7 +83,7 @@ const ResetPasswordPage = () => {
                         <div className="p-2 bg-white/20 backdrop-blur-sm rounded-lg">
                             <ShieldCheck className="text-white" size={24} />
                         </div>
-                        <span className="text-2xl font-bold tracking-wider">StayHome</span>
+                        <span className="text-2xl font-bold tracking-wider">HomeSarthi</span>
                     </div>
 
                     <div className="space-y-6 max-w-lg">
@@ -105,7 +106,7 @@ const ResetPasswordPage = () => {
                     </div>
 
                     <div className="flex items-center gap-4 text-sm text-blue-100">
-                        <span>© 2024 StayHome. All rights reserved.</span>
+                        <span>© 2024 HomeSarthi. All rights reserved.</span>
                     </div>
                 </div>
             </motion.div>

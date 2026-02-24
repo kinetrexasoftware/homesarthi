@@ -108,7 +108,7 @@ const OwnerDashboard = () => {
               <div className="bg-gradient-to-tr from-blue-600 to-indigo-600 p-2 rounded-xl shadow-lg shadow-blue-600/20">
                 <Home className="text-white" size={24} />
               </div>
-              <span className="text-xl font-black tracking-tighter text-gray-900">StayHome<span className="text-blue-600">.</span></span>
+              <span className="text-xl font-black tracking-tighter text-gray-900">HomeSarthi<span className="text-blue-600">.</span></span>
             </Link>
           </div>
 

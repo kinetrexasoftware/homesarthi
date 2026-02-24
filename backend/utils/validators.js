@@ -1,7 +1,7 @@
 import validator from 'validator';
 
 /**
- * Comprehensive validation utilities for the StayHome application
+ * Comprehensive validation utilities for the HomeSarthi application
  * Provides input validation, sanitization, and business rule validation
  */
 

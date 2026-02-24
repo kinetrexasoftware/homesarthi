@@ -105,7 +105,7 @@ const RoomDetailPage = () => {
     if (navigator.share) {
       navigator.share({
         title: room.title,
-        text: `Check out this room at StayHome: ${room.title}`,
+        text: `Check out this room at HomeSarthi: ${room.title}`,
         url: window.location.href,
       }).catch(() => { });
     } else {
@@ -288,8 +288,8 @@ const RoomDetailPage = () => {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-8 md:py-12">
-        <div className="grid lg:grid-cols-12 gap-12">
+      <main className="max-w-7xl mx-auto px-4 py-6 md:py-12">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
 
           {/* CONTENT COLUMN */}
           <div className="lg:col-span-8 space-y-12">
@@ -299,33 +299,33 @@ const RoomDetailPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="relative h-[300px] md:h-[500px] bg-gray-100 rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-gray-200"
+                className="relative h-[250px] xs:h-[300px] md:h-[500px] bg-gray-100 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-gray-200"
               >
                 <img src={room.images[selectedImage]?.url} className="w-full h-full object-cover" alt="" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
 
-                <div className="absolute top-6 left-6 flex gap-2">
-                  <div className="px-4 py-1.5 bg-white/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                <div className="absolute top-3 left-3 md:top-6 md:left-6 flex flex-wrap gap-1.5 md:gap-2">
+                  <div className="px-3 py-1 bg-white/90 backdrop-blur-md text-black text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg">
                     {room.roomType}
                   </div>
-                  <div className="px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg">
+                  <div className="px-3 py-1 bg-blue-600 text-white text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg">
                     {room.availability?.status === 'available' ? 'Available Now' :
                       room.availability?.status === 'occupied' ? 'Opening Soon' : 'Maintenance'}
                   </div>
                 </div>
 
-                <button className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-white transition-all shadow-xl group/btn">
-                  <Camera size={18} className="text-blue-600 group-hover/btn:scale-110 transition-transform" />
-                  <span className="text-xs font-black uppercase tracking-widest">Show all Photos ({room.images.length})</span>
+                <button className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white/90 backdrop-blur-md px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl flex items-center gap-2 hover:bg-white transition-all shadow-xl group/btn">
+                  <Camera size={16} className="text-blue-600 group-hover/btn:scale-110 transition-transform" />
+                  <span className="text-[10px] md:text-xs font-black uppercase tracking-widest">Photos ({room.images.length})</span>
                 </button>
               </motion.div>
 
-              <div className="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+              <div className="flex gap-2 md:gap-4 overflow-x-auto no-scrollbar pb-2">
                 {room.images.map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setSelectedImage(i)}
-                    className={`relative w-24 md:w-32 h-20 md:h-24 rounded-2xl overflow-hidden transition-all shrink-0 ${selectedImage === i ? 'ring-4 ring-blue-600 scale-95 shadow-lg' : 'opacity-60 grayscale hover:grayscale-0 hover:opacity-100'}`}
+                    className={`relative w-20 md:w-32 h-16 md:h-24 rounded-xl md:rounded-2xl overflow-hidden transition-all shrink-0 ${selectedImage === i ? 'ring-2 md:ring-4 ring-blue-600 scale-95 shadow-lg' : 'opacity-60 grayscale hover:grayscale-0 hover:opacity-100'}`}
                   >
                     <img src={img.url} className="w-full h-full object-cover" alt="" />
                   </button>
@@ -335,72 +335,70 @@ const RoomDetailPage = () => {
 
             {/* Core Info */}
             <section>
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 pb-8 border-b border-gray-100">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <span className="flex items-center gap-1.5 px-3 py-1 bg-gray-900 text-white text-[10px] font-black uppercase tracking-widest rounded-lg">
-                      <Zap size={12} className="fill-blue-400 text-blue-400" /> Instant Book
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6 mb-6 pb-6 md:mb-8 md:pb-8 border-b border-gray-100">
+                <div className="space-y-3 md:space-y-4">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-900 text-white text-[9px] font-black uppercase tracking-widest rounded-lg">
+                      <Zap size={10} className="fill-blue-400 text-blue-400" /> Instant Book
                     </span>
-                    <span className="flex items-center gap-1.5 px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-widest rounded-lg">
-                      <Users size={12} /> {room.sharingType}
+                    <span className="flex items-center gap-1.5 px-2.5 py-1 bg-blue-50 text-blue-600 text-[9px] font-black uppercase tracking-widest rounded-lg">
+                      <Users size={10} /> {room.sharingType}
                     </span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">{room.title}</h1>
-                  <div className="flex items-center gap-6">
+                  <h1 className="text-2xl md:text-5xl font-black text-gray-900 leading-tight break-words">{room.title}</h1>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3 md:gap-6">
                     <div className="flex items-center gap-2 text-gray-500">
-                      <MapPin size={18} className="text-blue-600" />
-                      <span className="text-sm font-bold">{formatRoomAddress(room.location?.address)}</span>
+                      <MapPin size={16} className="text-blue-600 shrink-0" />
+                      <span className="text-sm font-bold break-words">{formatRoomAddress(room.location?.address)}</span>
                     </div>
                     <div className="flex items-center gap-2 text-gray-500">
-                      <Star size={18} className="text-amber-500 fill-amber-500" />
+                      <Star size={16} className="text-amber-500 fill-amber-400" />
                       <span className="text-sm font-black text-gray-900">{room.rating?.average || 0}</span>
-                      <span className="text-sm font-bold">({reviews.length} reviews)</span>
+                      <span className="text-xs font-bold text-gray-400">({reviews.length} reviews)</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                <div className="p-6 bg-white border border-gray-100 rounded-3xl shadow-sm">
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Monthly Rent</p>
-                  <p className="text-xl font-black text-gray-900">{formatCurrency(room.rent)}</p>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-6">
+                <div className="p-4 md:p-6 bg-white border border-gray-100 rounded-2xl md:rounded-3xl shadow-sm">
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Monthly Rent</p>
+                  <p className="text-lg md:text-xl font-black text-gray-900">{formatCurrency(room.rent)}</p>
                   {room.rent?.electricityBillIncluded && (
                     <span className="text-[8px] font-black text-yellow-600 uppercase tracking-widest bg-yellow-50 px-1.5 py-0.5 rounded-md mt-1 inline-block">Electricity Inc.</span>
                   )}
                 </div>
-                <div className="p-6 bg-white border border-gray-100 rounded-3xl shadow-sm">
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Security Deposit</p>
-                  <p className="text-xl font-black text-gray-900">{formatCurrency(room.rent?.deposit ?? ((room.rent?.amount || 0) * 2))}</p>
+                <div className="p-4 md:p-6 bg-white border border-gray-100 rounded-2xl md:rounded-3xl shadow-sm">
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Deposit</p>
+                  <p className="text-lg md:text-xl font-black text-gray-900">{formatCurrency(room.rent?.deposit ?? ((room.rent?.amount || 0) * 2))}</p>
                 </div>
-                <div className="p-6 bg-white border border-gray-100 rounded-3xl shadow-sm">
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Furnishing</p>
-                  <p className="text-xl font-black text-gray-900 capitalize">{room.furnishing?.replace('-', ' ')}</p>
+                <div className="p-4 md:p-6 bg-white border border-gray-100 rounded-2xl md:rounded-3xl shadow-sm">
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Furnishing</p>
+                  <p className="text-lg md:text-xl font-black text-gray-900 capitalize truncate">{room.furnishing?.replace('-', ' ')}</p>
                 </div>
-                <div className="p-6 bg-white border border-gray-100 rounded-3xl shadow-sm">
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Gender</p>
-                  <p className="text-xl font-black text-gray-900 capitalize">{room.genderPreference}</p>
+                <div className="p-4 md:p-6 bg-white border border-gray-100 rounded-2xl md:rounded-3xl shadow-sm">
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Gender</p>
+                  <p className="text-lg md:text-xl font-black text-gray-900 capitalize truncate">{room.genderPreference}</p>
                 </div>
-                <div className="p-6 bg-white border border-gray-100 rounded-3xl shadow-sm">
-                  <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Availability</p>
-                  <p className={`text-base font-black ${room.availability?.status === 'available' ? 'text-green-600' : 'text-amber-600'}`}>
-                    {room.availability?.status === 'available' ? 'Available Now' :
-                      room.availability?.availableFrom ? `From ${new Date(room.availability.availableFrom).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}` :
-                        'Check with Owner'}
+                <div className="p-4 md:p-6 bg-white border border-gray-100 rounded-2xl md:rounded-3xl shadow-sm">
+                  <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest mb-1">Status</p>
+                  <p className={`text-sm md:text-base font-black ${room.availability?.status === 'available' ? 'text-green-600' : 'text-amber-600'}`}>
+                    {room.availability?.status === 'available' ? 'Available' : 'Booked'}
                   </p>
                 </div>
               </div>
             </section>
 
             {/* Description */}
-            <section className="p-8 md:p-12 bg-white rounded-[2.5rem] border border-gray-100 shadow-sm space-y-6">
-              <h3 className="text-2xl font-black text-gray-900">About this Property</h3>
-              <p className="text-gray-600 font-medium leading-loose text-lg whitespace-pre-line">
+            <section className="p-6 md:p-12 bg-white rounded-[1.5rem] md:rounded-[2.5rem] border border-gray-100 shadow-sm space-y-4 md:space-y-6">
+              <h3 className="text-xl md:text-2xl font-black text-gray-900">About this Property</h3>
+              <p className="text-gray-600 font-medium leading-relaxed md:leading-loose text-base md:text-lg whitespace-pre-line break-words">
                 {room.description}
               </p>
-              <div className="pt-6 border-t border-gray-50 flex flex-wrap gap-4">
+              <div className="pt-4 md:pt-6 border-t border-gray-50 flex flex-wrap gap-2 md:gap-4">
                 {room.rules?.map((rule, i) => (
-                  <div key={i} className="flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 rounded-xl text-xs font-bold">
-                    <ShieldAlert size={14} /> {rule}
+                  <div key={i} className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-red-50 text-red-600 rounded-xl text-[10px] md:text-xs font-bold">
+                    <ShieldAlert size={12} className="shrink-0" /> {rule}
                   </div>
                 ))}
               </div>
@@ -409,7 +407,7 @@ const RoomDetailPage = () => {
             {/* Amenities Grid */}
             <section className="space-y-8">
               <h3 className="text-2xl font-black text-gray-900">What this place offers</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
                 {room.amenities?.map((amenity, i) => (
                   <div key={i} className="flex items-center gap-4 p-5 bg-white border border-gray-100 rounded-3xl hover:border-blue-100 transition-colors group">
                     <div className="w-12 h-12 bg-gray-50 group-hover:bg-blue-50 text-gray-600 group-hover:text-blue-600 rounded-2xl flex items-center justify-center text-2xl transition-all">
@@ -422,20 +420,22 @@ const RoomDetailPage = () => {
             </section>
 
             {/* Location Section */}
-            <section className="space-y-8 bg-white rounded-[2.5rem] p-8 md:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
+            <section className="space-y-6 md:space-y-8 bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-12 border border-gray-100 shadow-sm relative overflow-hidden">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div>
-                  <h3 className="text-2xl font-black text-gray-900 flex items-center gap-2">
-                    <MapIcon className="text-blue-600" size={24} /> Location Details
+                <div className="min-w-0">
+                  <h3 className="text-xl md:text-2xl font-black text-gray-900 flex items-center gap-2">
+                    <MapIcon className="text-blue-600 shrink-0" size={24} /> Location Details
                   </h3>
-                  <p className="text-gray-400 font-bold mt-1 uppercase tracking-widest text-[10px]">{formatRoomAddress(room.location?.address)}</p>
+                  <p className="text-gray-400 font-bold mt-1 uppercase tracking-widest text-[9px] md:text-[10px] break-words line-clamp-2 md:line-clamp-none">
+                    {formatRoomAddress(room.location?.address)}
+                  </p>
                 </div>
-                <button onClick={() => window.open(buildGoogleMapsLink(displayLoc.lat, displayLoc.lng), '_blank')} className="flex items-center gap-2 px-6 py-3 bg-gray-50 text-gray-900 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-gray-100 transition-all">
-                  <Navigation size={18} /> Open in Maps
+                <button onClick={() => window.open(buildGoogleMapsLink(displayLoc.lat, displayLoc.lng), '_blank')} className="flex items-center justify-center gap-2 px-6 py-3 bg-gray-50 text-gray-900 rounded-xl md:rounded-2xl text-[10px] md:text-xs font-black uppercase tracking-widest hover:bg-gray-100 transition-all w-full md:w-auto">
+                  <Navigation size={16} /> Open in Maps
                 </button>
               </div>
 
-              <div className="h-[400px] rounded-[2rem] overflow-hidden border border-gray-100 relative group">
+              <div className="h-[300px] md:h-[400px] rounded-2xl md:rounded-[2rem] overflow-hidden border border-gray-100 relative group">
                 <RoomMapView room={room} height="100%" />
               </div>
 
@@ -556,39 +556,39 @@ const RoomDetailPage = () => {
             </section>
 
             {/* Why Book This - Repositioned for stability */}
-            <section className="bg-gradient-to-br from-indigo-900 to-blue-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden group shadow-2xl">
-              <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <section className="bg-gradient-to-br from-indigo-900 to-blue-900 rounded-[1.5rem] md:rounded-[2.5rem] p-7 md:p-10 text-white relative overflow-hidden group shadow-2xl">
+              <div className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
                 <div>
-                  <h4 className="text-3xl font-black mb-6">Why book this property?</h4>
-                  <ul className="space-y-6">
+                  <h4 className="text-2xl md:text-3xl font-black mb-4 md:mb-6">Why book this property?</h4>
+                  <ul className="space-y-4 md:space-y-6">
                     <li className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-blue-300">
-                        <ShieldCheck size={20} />
+                      <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-white/10 flex items-center justify-center text-blue-300">
+                        <ShieldCheck size={18} className="md:size-20" />
                       </div>
                       <div>
-                        <p className="text-sm font-black uppercase tracking-widest">Verified Owner</p>
-                        <p className="text-[10px] text-blue-200 font-bold uppercase tracking-widest">Identity & Property Confirmed</p>
+                        <p className="text-xs md:text-sm font-black uppercase tracking-widest">Verified Owner</p>
+                        <p className="text-[9px] md:text-[10px] text-blue-200 font-bold uppercase tracking-widest">Identity & Property Confirmed</p>
                       </div>
                     </li>
                     <li className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-green-300">
-                        <Zap size={20} />
+                      <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-white/10 flex items-center justify-center text-green-300">
+                        <Zap size={18} className="md:size-20" />
                       </div>
                       <div>
-                        <p className="text-sm font-black uppercase tracking-widest">Instant Approval</p>
-                        <p className="text-[10px] text-green-200 font-bold uppercase tracking-widest">Responses within 2 hours</p>
+                        <p className="text-xs md:text-sm font-black uppercase tracking-widest">Instant Approval</p>
+                        <p className="text-[9px] md:text-[10px] text-green-200 font-bold uppercase tracking-widest">Responses within 2 hours</p>
                       </div>
                     </li>
                   </ul>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-6 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10">
-                    <p className="text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">Support</p>
-                    <p className="text-lg font-black italic">24/7 Care</p>
+                <div className="grid grid-cols-2 gap-3 md:gap-4">
+                  <div className="p-4 md:p-6 bg-white/5 backdrop-blur-md rounded-2xl md:rounded-3xl border border-white/10">
+                    <p className="text-[9px] md:text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">Support</p>
+                    <p className="text-base md:text-lg font-black italic">24/7 Care</p>
                   </div>
-                  <div className="p-6 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10">
-                    <p className="text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">Safety</p>
-                    <p className="text-lg font-black italic">Protected</p>
+                  <div className="p-4 md:p-6 bg-white/5 backdrop-blur-md rounded-2xl md:rounded-3xl border border-white/10">
+                    <p className="text-[9px] md:text-[10px] font-black text-blue-200 uppercase tracking-widest mb-1">Safety</p>
+                    <p className="text-base md:text-lg font-black italic">Protected</p>
                   </div>
                 </div>
               </div>
@@ -626,7 +626,7 @@ const RoomDetailPage = () => {
               </div>
 
               {/* Criteria Bars (Flipkart style) */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 p-8 bg-gray-50 rounded-[2.5rem]">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 p-5 md:p-8 bg-gray-50 rounded-[1.5rem] md:rounded-[2.5rem]">
                 {['Cleanliness', 'Accuracy', 'Communication', 'Location', 'Value'].map(c => (
                   <div key={c} className="space-y-2">
                     <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{c}</p>
@@ -649,7 +649,7 @@ const RoomDetailPage = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-8 bg-white border border-gray-100 rounded-[2rem] shadow-sm relative group hover:border-blue-100 transition-all"
+                    className="p-5 md:p-8 bg-white border border-gray-100 rounded-2xl md:rounded-[2rem] shadow-sm relative group hover:border-blue-100 transition-all"
                   >
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-4">
@@ -674,7 +674,7 @@ const RoomDetailPage = () => {
                     <p className="text-gray-600 font-medium leading-relaxed italic">"{review.comment}"</p>
                   </motion.div>
                 )) : (
-                  <div className="py-20 text-center bg-gray-50 rounded-[2.5rem] border-2 border-dashed border-gray-100">
+                  <div className="py-12 md:py-20 text-center bg-gray-50 rounded-[1.5rem] md:rounded-[2.5rem] border-2 border-dashed border-gray-100">
                     <MessageCircle className="mx-auto mb-4 text-gray-300" size={40} />
                     <p className="text-sm font-black text-gray-400 uppercase tracking-widest italic">No reviews yet. Be the first!</p>
                   </div>
@@ -687,7 +687,7 @@ const RoomDetailPage = () => {
           <aside className="lg:col-span-4 lg:sticky lg:top-36 h-fit space-y-8">
 
             {/* Action Card */}
-            <div className="bg-white rounded-[2.5rem] p-8 border border-gray-100 shadow-2xl shadow-gray-200/50 sticky top-32">
+            <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-8 border border-gray-100 shadow-2xl shadow-gray-200/50 sticky top-32">
               <div className="flex items-baseline gap-2 mb-8">
                 <span className="text-4xl font-black text-gray-900">{formatCurrency(room.rent)}</span>
                 <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">/ MONTH</span>
@@ -730,14 +730,14 @@ const RoomDetailPage = () => {
                 Trusted by 2,000+ students across India.<br />Safe & Secure Payments.
               </p>
 
-              <div className="mt-8 pt-8 border-t border-gray-100 flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl overflow-hidden shadow-md">
+              <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-100 flex items-center gap-4">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl overflow-hidden shadow-md shrink-0">
                   <img src={room.owner?.avatar?.url || `https://ui-avatars.com/api/?name=${room.owner?.name}`} className="w-full h-full object-cover" alt="" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h5 className="text-sm font-black text-gray-900 truncate uppercase tracking-widest">Hosted by {room.owner?.name}</h5>
-                  <p className="text-[10px] font-bold text-gray-400 mt-0.5 uppercase tracking-widest flex items-center gap-1">
-                    <CheckCircle size={12} className="text-green-500" /> Identity Verified
+                  <h5 className="text-xs md:text-sm font-black text-gray-900 truncate uppercase tracking-widest">Hosted by {room.owner?.name}</h5>
+                  <p className="text-[9px] font-bold text-gray-400 mt-0.5 uppercase tracking-widest flex items-center gap-1">
+                    <CheckCircle size={10} className="text-green-500" /> Identity Verified
                   </p>
                 </div>
               </div>

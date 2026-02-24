@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useAuthStore from '../../store/useAuthStore';
 
+import logo from '../../assets/logo.png';
+
 const Navbar = () => {
   const { user, isAuthenticated, logout } = useAuthStore();
   const navigate = useNavigate();
@@ -44,7 +46,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-12 h-12 transition-transform duration-300 group-hover:scale-110 flex items-center justify-center">
               <img
-                src="/logo.png"
+                src={logo}
                 alt="Logo"
                 className="w-full h-full object-contain"
                 onError={(e) => {
@@ -54,7 +56,7 @@ const Navbar = () => {
               />
             </div>
             <span className="text-2xl font-black tracking-tighter block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
-              HomeSarthi<span className="text-blue-600">.</span>
+              HomeSarthi
             </span>
           </Link>
 

@@ -2,9 +2,8 @@
   "expo": {
     "name": "HomeSarthi",
     "slug": "homesarthi",
-    "owner": "hridesh2005",
     "scheme": "homesarthi-mobile",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,7 +22,7 @@
     },
     "android": {
       "package": "com.homesarthi.mobile",
-      "versionCode": 3,
+      "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F5F5F5"
@@ -68,6 +67,7 @@
       "eas": {
         "projectId": "6b5185b2-2350-47bf-bd3c-ead96cc039aa"
       }
-    }
+    },
+    "owner": "hridesh2005"
   }
 }

@@ -1011,7 +1011,7 @@ const DashboardScreen = ({ navigation, route }) => {
                             />
                         }
                         ListHeaderComponentStyle={{
-                            zIndex: 0,
+                            zIndex: 1000,
                             elevation: 100,
                             backgroundColor: 'white',
                             overflow: 'visible',
@@ -1225,9 +1225,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 0,
         paddingBottom: 0,
-        backgroundColor: 'smoke',
-        zIndex: 5000, // Very high for the entire header
-        elevation: 5, // For Android
+        backgroundColor: '#FFFFFF',
+        zIndex: 5000,
+        elevation: 5,
         overflow: 'visible',
     },
     topBar: {
@@ -1392,7 +1392,7 @@ const styles = StyleSheet.create({
         shadowRadius: 10,
         elevation: 3,
         overflow: 'hidden',
-        zIndex: 1, // Explicitly lower than header (10000)
+        zIndex: 1, // Explicitly lower than header (1000)
     },
     cardList: {
         marginTop: 0,
@@ -1647,7 +1647,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         maxHeight: 320,
         zIndex: 9999,
-        elevation: 15,
+        elevation: 105,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 12 },
         shadowOpacity: 0.2,

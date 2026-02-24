@@ -1,6 +1,6 @@
-# StayHome Mobile App
+# HomeSarthi Mobile App
 
-React Native mobile application for StayHome - Find your perfect student accommodation.
+React Native mobile application for HomeSarthi - Find your perfect student accommodation.
 
 ## 🚀 Features
 

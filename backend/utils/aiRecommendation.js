@@ -3,7 +3,7 @@ import { User } from '../models/User.js';
 import { Analytics } from '../models/Analytics.js';
 
 /**
- * AI-powered recommendation engine for StayHome platform
+ * AI-powered recommendation engine for HomeSarthi platform
  * Provides personalized room recommendations based on user preferences,
  * behavior patterns, and machine learning insights
  */

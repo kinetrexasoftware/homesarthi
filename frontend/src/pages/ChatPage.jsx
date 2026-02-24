@@ -14,6 +14,7 @@ const ChatPage = () => {
   const location = useLocation();
   const [conversations, setConversations] = useState([]);
   const [selectedConversation, setSelectedConversation] = useState(null);
+  const [view, setView] = useState('list'); // 'list' or 'window'
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const ChatPage = () => {
     if (location.state?.recipientId) {
       const { recipientId, roomId, recipientInfo } = location.state;
       handleStartConversation(recipientId, roomId, recipientInfo);
+      setView('window');
     }
   }, [location.state]);
 
@@ -77,6 +79,7 @@ const ChatPage = () => {
     const existing = conversations.find(c => c.otherUser?._id === recipientId);
     if (existing) {
       setSelectedConversation(existing);
+      setView('window');
       return;
     }
 
@@ -100,30 +103,29 @@ const ChatPage = () => {
   if (loading) return <Loader fullScreen />;
 
   return (
-    <div className="h-screen max-w-7xl mx-auto px-4 flex flex-col min-h-0">
-      <div className="mb-6 flex-shrink-0">
-        <h1 className="text-4xl font-bold flex items-center">
-          <MessageCircle className="mr-3" />
-          Messages
-        </h1>
-      </div>
-
-      <div className="flex-1 min-h-0 border-2 border-gray-100 overflow-hidden">
+    <div className="h-[100dvh] md:h-screen w-full bg-[#111b21] flex flex-col min-h-0 overflow-hidden">
+      <div className="flex-1 min-h-0 overflow-hidden relative">
         <div className="flex h-full min-h-0">
-          <div className="w-1/3 border-r bg-white flex flex-col min-h-0">
+          {/* Chat List - Hidden on mobile when window is open */}
+          <div className={`${view === 'window' ? 'hidden' : 'flex'} md:flex w-full md:w-1/3 lg:w-1.5/5 border-r border-[#222d34] bg-[#111b21] flex-col min-h-0`}>
             <ChatList
               conversations={conversations}
               selectedConversation={selectedConversation}
-              onSelectConversation={setSelectedConversation}
+              onSelectConversation={(conv) => {
+                setSelectedConversation(conv);
+                setView('window');
+              }}
               onRefresh={fetchConversations}
             />
           </div>
 
-          <div className="flex-1 bg-white flex flex-col min-h-0">
+          {/* Chat Window - Hidden on mobile when list is open */}
+          <div className={`${view === 'list' ? 'hidden' : 'flex'} md:flex flex-1 bg-[#0b141a] flex-col min-h-0`}>
             <ChatWindow
               conversation={selectedConversation}
               currentUserId={user?._id}
               onConversationUpdate={fetchConversations}
+              onBack={() => setView('list')}
             />
           </div>
         </div>

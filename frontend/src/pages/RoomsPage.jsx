@@ -724,7 +724,7 @@ const RoomsPage = () => {
                     <Bot size={22} />
                   </div>
                   <div>
-                    <h4 className="text-sm font-black uppercase tracking-tight">StayHome AI</h4>
+                    <h4 className="text-sm font-black uppercase tracking-tight">HomeSarthi AI</h4>
                     <div className="flex items-center gap-1.5">
                       <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
                       <span className="text-[10px] font-bold text-blue-100">Intelligent Assistant</span>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Send, Home, MapPin, DollarSign, MessageCircle, ArrowDown, Ban, Unlock } from 'lucide-react';
+import { Send, Home, MapPin, DollarSign, MessageCircle, ArrowDown, Ban, Unlock, ArrowLeft, Phone, Video, MoreVertical, Smile, Paperclip } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import MessageBubble from './MessageBubble';
 import api from '../../utils/api';
@@ -7,7 +7,7 @@ import { getSocket } from '../../utils/socket';
 import toast from 'react-hot-toast';
 import { formatCurrency } from '../../utils/helpers';
 
-const ChatWindow = ({ conversation, currentUserId, onConversationUpdate }) => {
+const ChatWindow = ({ conversation, currentUserId, onConversationUpdate, onBack }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [loading, setLoading] = useState(false);
@@ -81,7 +81,7 @@ const ChatWindow = ({ conversation, currentUserId, onConversationUpdate }) => {
   }, [socket, conversation?.otherUser?._id]);
 
   /* =======================
-     SCROLL LOGIC (FIXED)
+     SCROLL LOGIC
   ======================= */
   useEffect(() => {
     if (isUserNearBottom) {
@@ -193,8 +193,12 @@ const ChatWindow = ({ conversation, currentUserId, onConversationUpdate }) => {
   ======================= */
   if (!conversation) {
     return (
-      <div className="flex items-center justify-center h-full text-gray-400">
-        Select a conversation
+      <div className="flex flex-col items-center justify-center h-full bg-[#222d34] text-[#8696a0] p-12 text-center">
+        <div className="w-32 h-32 bg-[#202c33] rounded-full flex items-center justify-center mb-8">
+          <MessageCircle size={64} className="text-[#00a884] opacity-20" />
+        </div>
+        <h2 className="text-gray-200 text-3xl font-light mb-4">WhatsApp for HomeSarthi</h2>
+        <p className="text-sm font-bold opacity-60 max-w-sm">Select a conversation to start messaging. Your messages are end-to-end encrypted.</p>
       </div>
     );
   }
@@ -203,38 +207,37 @@ const ChatWindow = ({ conversation, currentUserId, onConversationUpdate }) => {
      UI
   ======================= */
   return (
-    <div className="flex flex-col h-full min-h-0 bg-white shadow-lg">
+    <div className="flex flex-col h-full min-h-0 bg-[#0b141a]">
 
-      {/* HEADER */}
-      <div className="p-4 bg-[#075E54] flex-shrink-0 flex items-center shadow-md">
-        <div className="flex items-center space-x-4">
-          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+      {/* WHATSAPP HEADER */}
+      <div className="px-4 py-2 bg-[#202c33] flex-shrink-0 flex items-center justify-between shadow-md z-20">
+        <div className="flex items-center gap-3">
+          {onBack && (
+            <button onClick={onBack} className="md:hidden text-[#aebac1] mr-1">
+              <ArrowLeft size={24} />
+            </button>
+          )}
+          <div className="w-10 h-10 rounded-full bg-gray-600 overflow-hidden flex-shrink-0">
             {conversation.otherUser?.avatar?.url ? (
-              <img src={conversation.otherUser.avatar.url} className="w-full h-full rounded-full object-cover" alt="" />
+              <img src={conversation.otherUser.avatar.url} className="w-full h-full object-cover" alt="" />
             ) : (
-              <span className="text-white font-black">{(conversation.otherUser?.name || 'U')[0]}</span>
+              <div className="w-full h-full flex items-center justify-center text-white font-bold bg-[#6a7175]">
+                {(conversation.otherUser?.name || 'U')[0]}
+              </div>
             )}
           </div>
-          <div>
-            <h3 className="font-bold text-white leading-none mb-1">
+          <div className="min-w-0">
+            <h3 className="font-medium text-[#d1d7db] truncate text-base leading-none mb-1">
               {conversation.otherUser?.name || 'User'}
             </h3>
-            <p className="text-[10px] text-emerald-100 font-bold uppercase tracking-widest opacity-80">Online Now</p>
+            <p className="text-[11px] text-[#00a884] font-black">online</p>
           </div>
         </div>
 
-        <div className="ml-auto flex items-center space-x-2">
-          <button
-            onClick={isBlocked ? handleUnblockUser : handleBlockUser}
-            disabled={blocking}
-            className={`p-2 rounded-full transition-all ${isBlocked
-                ? 'bg-red-100 text-red-600 hover:bg-red-200'
-                : 'bg-white/10 text-white hover:bg-white/20'
-              }`}
-            title={isBlocked ? 'Unblock User' : 'Block User'}
-          >
-            {isBlocked ? <Unlock size={18} /> : <Ban size={18} />}
-          </button>
+        <div className="flex items-center gap-6 text-[#aebac1]">
+          <Video size={20} className="hidden sm:block cursor-pointer" />
+          <Phone size={18} className="hidden sm:block cursor-pointer" />
+          <MoreVertical size={20} className="cursor-pointer" />
         </div>
       </div>
 
@@ -255,43 +258,47 @@ const ChatWindow = ({ conversation, currentUserId, onConversationUpdate }) => {
       )}
 
       {conversation.room && (
-        <div className="bg-white/95 backdrop-blur-md px-4 py-2 border-b flex-shrink-0 z-10 sticky top-0">
+        <div className="bg-[#182229] px-4 py-2 border-b border-[#222d34] flex-shrink-0 z-10 transition-colors hover:bg-[#202c33]">
           <Link
             to={`/rooms/${conversation.room._id}`}
             className="flex items-center justify-between group"
           >
             <div className="flex items-center gap-2">
-              <Home size={14} className="text-emerald-600" />
-              <span className="text-[11px] font-black text-gray-900 uppercase tracking-tight group-hover:text-emerald-600 transition-colors">
+              <Home size={14} className="text-[#00a884]" />
+              <span className="text-xs font-bold text-[#d1d7db] group-hover:text-[#00a884] transition-colors truncate max-w-[200px]">
                 {conversation.room.title}
               </span>
             </div>
-            <div className="text-[10px] font-black text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">
-              {formatCurrency(conversation.room.rent?.amount)}/mo
+            <div className="text-[11px] font-black text-[#00a884] bg-[#00a884]/10 px-2 py-0.5 rounded-md">
+              {formatCurrency(conversation.room.rent)}/mo
             </div>
           </Link>
         </div>
       )}
 
-      {/* MESSAGES */}
+      {/* MESSAGES AREA */}
       <div
         ref={messagesContainerRef}
         onScroll={handleMessagesScroll}
-        className="flex-1 min-h-0 overflow-y-auto p-6 space-y-2 relative bg-[#E5DDD5]"
+        className="flex-1 min-h-0 overflow-y-auto p-4 space-y-2 relative"
         style={{
           backgroundImage: `url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png")`,
           backgroundBlendMode: 'overlay',
-          backgroundSize: '400px'
+          backgroundColor: '#0b141a',
+          backgroundSize: '400px',
+          opacity: 0.95
         }}
       >
         {fetching && (
-          <div className="text-center text-gray-400">Loading messages…</div>
+          <div className="text-center py-4">
+            <div className="inline-block w-6 h-6 border-2 border-[#00a884] border-t-transparent rounded-full animate-spin"></div>
+          </div>
         )}
 
         {!fetching && messages.length === 0 && (
-          <div className="text-center text-gray-400">
-            <MessageCircle size={40} className="mx-auto mb-2" />
-            Start the conversation
+          <div className="flex flex-col items-center justify-center h-full opacity-20">
+            <MessageCircle size={80} className="text-[#00a884] mb-4" />
+            <p className="text-[#d1d7db] font-bold uppercase tracking-widest text-sm">Safe Messaging Enabled</p>
           </div>
         )}
 
@@ -306,45 +313,58 @@ const ChatWindow = ({ conversation, currentUserId, onConversationUpdate }) => {
         {showScrollToBottom && (
           <button
             onClick={scrollToBottom}
-            className="sticky bottom-4 ml-auto mr-2 bg-blue-600 text-white p-2 rounded-full shadow-lg"
+            className="absolute bottom-6 right-6 bg-[#202c33] text-[#aebac1] p-2 rounded-full shadow-lg hover:bg-[#2a3942] z-30"
           >
-            <ArrowDown size={18} />
+            <ArrowDown size={20} />
           </button>
         )}
       </div>
 
-      {/* INPUT */}
+      {/* WHATSAPP INPUT AREA */}
       {!isBlocked && !amIBlocked ? (
         <form
           onSubmit={handleSendMessage}
-          className="p-4 border-t border-gray-200 bg-white flex-shrink-0 shadow-lg"
+          className="p-2 bg-[#202c33] flex-shrink-0 z-20"
         >
-          <div className="flex items-center space-x-3">
-            <input
-              value={newMessage}
-              onChange={(e) => {
-                setNewMessage(e.target.value);
-                handleTyping(!!e.target.value.trim());
-              }}
-              onBlur={() => handleTyping(false)}
-              placeholder="Type a message…"
-              className="flex-1 border border-gray-300 rounded-full px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 transition-all"
-              disabled={loading}
-            />
+          <div className="flex items-center gap-2">
+            <div className="flex-1 bg-[#2a3942] rounded-lg flex items-center px-3 py-1 gap-3">
+              <Smile size={24} className="text-[#8696a0] cursor-pointer" />
+              <Paperclip size={22} className="text-[#8696a0] cursor-pointer" />
+              <input
+                value={newMessage}
+                onChange={(e) => {
+                  setNewMessage(e.target.value);
+                  handleTyping(!!e.target.value.trim());
+                }}
+                onBlur={() => handleTyping(false)}
+                placeholder="Type a message"
+                className="flex-1 bg-transparent border-none focus:outline-none text-[#d1d7db] text-base py-2 placeholder:text-[#8696a0]"
+                disabled={loading}
+              />
+            </div>
+
             <button
               type="submit"
               disabled={loading || !newMessage.trim()}
-              className="bg-gradient-to-br from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-md"
+              className="bg-[#00a884] text-[#111b21] w-12 h-12 rounded-full flex items-center justify-center hover:scale-105 transition-transform disabled:opacity-50 disabled:scale-100 flex-shrink-0 shadow-lg"
             >
-              <Send size={20} />
+              <Send size={22} className="ml-0.5" />
             </button>
           </div>
         </form>
       ) : (
-        <div className="p-6 bg-gray-50 border-t border-gray-200 text-center">
-          <p className="text-gray-500 font-medium italic">
-            {isBlocked ? 'Unblock to resume conversation' : 'Messaging is unavailable'}
+        <div className="p-4 bg-[#182229] border-t border-[#222d34] text-center">
+          <p className="text-[#8696a0] font-bold text-sm italic">
+            {isBlocked ? 'You have blocked this contact' : 'This conversation is read-only'}
           </p>
+          {isBlocked && (
+            <button
+              onClick={handleUnblockUser}
+              className="mt-2 text-[#00a884] font-black uppercase text-[11px] tracking-widest hover:underline"
+            >
+              Unblock now
+            </button>
+          )}
         </div>
       )}
     </div>

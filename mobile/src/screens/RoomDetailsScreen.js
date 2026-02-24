@@ -230,7 +230,7 @@ const RoomDetailsScreen = ({ route, navigation }) => {
         try {
             await Share.share({
                 message: `Check out this room: ${room.title} - ₹${room.rent?.amount}/month`,
-                url: `https://stayhome.com/rooms/${room._id}`,
+                url: `https://homesarthi.com/rooms/${room._id}`,
             });
         } catch (error) {
             console.error(error);

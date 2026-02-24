@@ -31,8 +31,8 @@ const LoginForm = ({ redirectTo = null }) => {
       const role = data.data.user.role;
       const redirectPath = redirectTo || (
         role === 'admin' ? '/admin/dashboard' :
-        role === 'owner' ? '/owner/dashboard' :
-        '/student/dashboard'
+          role === 'owner' ? '/owner/dashboard' :
+            '/student/dashboard'
       );
 
       navigate(redirectPath);
@@ -53,7 +53,7 @@ const LoginForm = ({ redirectTo = null }) => {
             <LogIn className="text-white" size={32} />
           </div>
           <h2 className="text-3xl font-bold">Welcome Back!</h2>
-          <p className="text-gray-600 mt-2">Login to your StayHome account</p>
+          <p className="text-gray-600 mt-2">Login to your HomeSarthi account</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">

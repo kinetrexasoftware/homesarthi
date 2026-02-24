@@ -4,7 +4,7 @@ import api from '../../utils/api';
 import Loader from '../common/Loader';
 import ImageUploader from './ImageUploader';
 import MapLocationPicker from './MapLocationPicker';
-import { MapPin, Navigation, Search, FileText, Upload, Building, Users, Grid, Home } from 'lucide-react';
+import { MapPin, Navigation, Search, FileText, Upload, Building, Users, Grid, Home, Layout } from 'lucide-react';
 
 const RoomForm = ({
   initialData = {},

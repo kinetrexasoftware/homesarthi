@@ -8,6 +8,9 @@ import RoomCard from '../components/rooms/RoomCard';
 import LocationSearch from '../components/common/LocationSearch';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import whyChooseUs from '../assets/why-choose-us.png';
+import faqHelp from '../assets/faq-help.png';
+
 const HomePage = () => {
   const navigate = useNavigate();
   const { isAuthenticated, user } = useAuthStore();
@@ -246,7 +249,7 @@ const HomePage = () => {
             >
               <div className="relative z-10 w-full max-w-lg mx-auto">
                 <img
-                  src="/why-choose-us.png"
+                  src={whyChooseUs}
                   alt="Happy students finding a room"
                   className="w-full h-auto drop-shadow-xl hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
@@ -450,7 +453,7 @@ const HomePage = () => {
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">Common Questions</h2>
             <p className="text-gray-600 text-lg mb-8">Can't find what you're looking for? Our team is available 24/7 to help you find the perfect room.</p>
-            <img src="/faq-help.png" alt="Help Center" className="w-full max-w-sm rounded-3xl mix-blend-multiply" />
+            <img src={faqHelp} alt="Help Center" className="w-full max-w-sm rounded-3xl mix-blend-multiply" />
           </div>
 
           {/* Right: Accordion */}

@@ -62,10 +62,10 @@ function App() {
   const isAuthPage = ['/login', '/register'].includes(location.pathname);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 flex flex-col overflow-x-hidden">
       <Navbar />
       <ScrollToTop />
-      <main className={isAdminRoute ? "flex-1" : "min-h-[calc(100vh-80px)]"}>
+      <main className={(isAdminRoute || location.pathname === '/chat') ? "flex-1" : "min-h-[calc(100vh-80px)]"}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
