@@ -31,7 +31,8 @@ export const useChat = () => {
     const token = localStorage.getItem('token');
     if (!token) return;
 
-    const newSocket = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:5000', {
+    const socketURL = import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL || window.location.origin;
+    const newSocket = io(socketURL, {
       auth: { token },
       transports: ['websocket', 'polling']
     });
