@@ -48,7 +48,8 @@ def resize_and_center_icon(input_path, output_path, target_size=(1024, 1024), lo
     print(f"Successfully saved resized icon to {output_path}")
 
 if __name__ == "__main__":
-    assets_dir = "assets"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    assets_dir = os.path.join(script_dir, "assets")
     input_file = os.path.join(assets_dir, "icon.png")
     
     # We update both icon and adaptive icon
