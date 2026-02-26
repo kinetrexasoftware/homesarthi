@@ -16,12 +16,12 @@ export const initSocket = (userId) => {
   const socketURL = import.meta.env.VITE_SOCKET_URL || import.meta.env.VITE_API_URL || window.location.origin;
 
   socket = io(socketURL, {
-    transports: ['websocket', 'polling'],
+    transports: ['polling', 'websocket'],
     auth: { token },
     reconnection: true,
     reconnectionDelay: 2000,
     reconnectionAttempts: 10,
-    secure: socketURL.startsWith('https')
+    secure: true // Always use secure for wss
   });
 
   socket.on('connect', () => {

@@ -64,6 +64,11 @@ const io = new Server(httpServer, {
     methods: ["GET", "POST"],
     credentials: true,
   },
+  pingTimeout: 60000,
+  pingInterval: 25000,
+  allowEIO3: true,
+  connectTimeout: 45000,
+  transports: ['polling', 'websocket']
 });
 
 global.io = io;
@@ -131,7 +136,13 @@ app.use("/api/notifications", notificationRoutes);
 app.use("/api", homeRoutes);
 
 // SERVE STATIC ASSETS (for Mobile/Web shared images)
-app.use('/public', express.static(path.join(__dirname, '../frontend/public')));
+// SERVE STATIC ASSETS 
+// 1. Backend uploads
+app.use('/public/uploads', express.static(path.resolve(__dirname, './public/uploads')));
+// 2. Main public folder (backend)
+app.use('/public', express.static(path.resolve(__dirname, './public')));
+// 3. Frontend public fallback (if needed for some old paths)
+app.use('/frontend-public', express.static(path.resolve(__dirname, '../frontend/public')));
 
 /* =========================
    SOCKET LOGIC
