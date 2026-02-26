@@ -81,7 +81,7 @@ app.use(compression());
 
 app.use(
   cors({
-    origin: "*", // Fully open for production mobile connectivity
+    origin: process.env.FRONTEND_URL || "*",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
