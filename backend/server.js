@@ -47,7 +47,12 @@ if (!process.env.JWT_SECRET) {
 }
 
 const app = express();
+
+// Trust proxy if behind Nginx/Cloudflare
+app.set('trust proxy', 1);
+
 const httpServer = createServer(app);
+
 
 /* =========================
    CORS – SINGLE SOURCE OF TRUTH

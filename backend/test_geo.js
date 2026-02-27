@@ -13,7 +13,12 @@ const Room = mongoose.model('Room', RoomSchema);
 
 async function testSearch() {
     try {
-        const uri = process.env.MONGO_URI || 'mongodb+srv://hirdeshkumarchaurasia_db_user:Hridesh%402005@cluster0.kmsdc9q.mongodb.net/';
+        const uri = process.env.MONGO_URI;
+        if (!uri) {
+            console.error('MONGO_URI is not defined in .env');
+            process.exit(1);
+        }
+
         await mongoose.connect(uri);
         console.log('Connected to MongoDB');
 

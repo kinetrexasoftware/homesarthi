@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 import {
     View,
     Text,
@@ -118,6 +119,29 @@ const ChatDetailScreen = ({ route, navigation }) => {
             }
         };
     }, [otherUser, fetchMessages, fetchRoomDetails]);
+
+    // Polling fallback - refresh every 1 second to ensure real-time feel if socket fails
+    useFocusEffect(
+        useCallback(() => {
+            if (!otherUser) return;
+
+            const interval = setInterval(() => {
+                // We use a silent fetch (no loading state) to refresh messages
+                const silentFetch = async () => {
+                    try {
+                        const { data } = await api.get(`/chat/conversation/${otherUser._id}`);
+                        if (data?.success) {
+                            setMessages(data.data.messages.reverse());
+                        }
+                    } catch (e) { /* ignore silent error */ }
+                };
+                silentFetch();
+            }, 1000);
+
+            return () => clearInterval(interval);
+        }, [otherUser])
+    );
+
 
     const handleSendMessage = async () => {
         if (!newMessage.trim() || loading || !otherUser?._id) return;

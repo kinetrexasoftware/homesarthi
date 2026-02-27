@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 import {
     View,
     Text,
@@ -49,6 +50,26 @@ const ChatListScreen = ({ navigation }) => {
         };
         setupSocket();
     }, [fetchConversations]);
+
+    // Polling fallback - refresh list every 2 seconds
+    useFocusEffect(
+        useCallback(() => {
+            const interval = setInterval(() => {
+                const silentFetch = async () => {
+                    try {
+                        const { data } = await api.get('/chat/conversations');
+                        if (data?.success) {
+                            setConversations(data.data.conversations || []);
+                        }
+                    } catch (e) { /* silent error */ }
+                };
+                silentFetch();
+            }, 2000);
+
+            return () => clearInterval(interval);
+        }, [])
+    );
+
 
     const onRefresh = () => {
         setRefreshing(true);
